@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Footer</title>
+    <style>
+      .footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+      }
+
+      .footer div {
+        flex: 1;
+        margin: 10px;
+      }
+
+      @media (max-width: 600px) {
+        .footer {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <footer class="footer">
+      <div>
+        <h4>Contact Information</h4>
+        <p>Address, Phone, Email</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <p>Home, About, Services</p>
+      </div>
+      <div>
+        <h4>Social Media</h4>
+        <p>LinkedIn, GitHub, Twitter</p>
+      </div>
+    </footer>
+  </body>
+</html>

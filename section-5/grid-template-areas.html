@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Layout</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "sidebar main"
+          "footer footer";
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+      }
+
+      .header {
+        grid-area: header;
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+
+      .main {
+        grid-area: main;
+        padding: 20px;
+      }
+
+      .footer {
+        grid-area: footer;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 800px) {
+        .container {
+          grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto auto auto;
+        }
+
+        .sidebar {
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Header</div>
+      <div class="sidebar">Sidebar</div>
+      <div class="main">Main Content</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>
